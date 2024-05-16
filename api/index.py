@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler
-from 'src/oai_agent' import main
+from src.oai_agent.oai_agent import main
 
 class handler(BaseHTTPRequestHandler):
  
