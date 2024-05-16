@@ -37,6 +37,8 @@ def configure_agent(assistant_type: str) -> GPTAssistantAgent:
     try:
         logger.info("Configuring GPT Assistant Agent...")
         assistant_id = load_assistant_id(assistant_type)
+        logger.info(f"Assistant ID: {assistant_id}")
+        logger.info(GetConfig().config_list)
         llm_config = GetConfig().config_list
         oai_config = {
             "config_list": llm_config["config_list"], "assistant_id": assistant_id}
